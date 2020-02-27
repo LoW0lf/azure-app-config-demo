@@ -31,4 +31,4 @@ Simple Azure demo that demonstrates interaction between the following services a
 * https://docs.microsoft.com/en-us/azure/azure-app-configuration/howto-best-practices
 * https://www.nuget.org/packages/Microsoft.Extensions.Configuration.AzureAppConfiguration/
 * https://www.nuget.org/packages/Microsoft.FeatureManagement/ 
-* https://12factor.net/
+* https://12factor.net/config 
