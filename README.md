@@ -10,11 +10,11 @@ Simple Azure demo that demonstrates interaction between the following services a
 # Run Demo 
 
 ## Create infrastructure 
-1. Create local config file for terraform `local.tfvars.json` with required input (accoring to `variables.tf`)
+1. Change the Azure backend part (line 3-5) in `main.tf` to an existing storage account in your subscription (required for storing terraform state)
 1. Login to Azure: `az login`
-1. Select desired subscription: `az account set --subscription ID`
+1. Select subscription of terraform state: `az account set --subscription XXX`
 1. Initialize Terraform: `terraform init`
-1. Apply Terraform `terraform apply -var-file local.tfvars.json`
+1. Apply Terraform with the subscription ID & tenant ID where you want to deploy the demo `terraform apply -var 'subscription_id=XXX' -var 'tenant_id=XXX'`
 
 ## Set configuration in App configuration service 
 * Add the following configurations to the app configuration service via portal: `TestApp:Settings:BackgroundColor`=> `e.g. Yellow`
